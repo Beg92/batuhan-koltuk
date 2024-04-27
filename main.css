@@ -1,0 +1,143 @@
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5em 1em; /* Adjust the padding as needed */
+    background-color: #b0d1f3; /* Header background */
+    color: white;
+    opacity: 1; /* If you want the header to be semi-transparent */
+}
+
+.header-title {
+    font-style: italic;
+    margin: 0; /* Ensure there's no margin offsetting the title */
+    /* The title will be centered automatically due to the flexbox settings */
+}
+
+
+main {
+    padding: 1em;
+}
+/* main.css */
+body {
+    font-family: Arial, sans-serif;
+    position: relative;
+    background-image: url('img/background-img.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: 1;
+}
+
+/* main.css */
+/* Style for the navigation menu */
+.whatsapp-icon {
+    color: #25D366; /* Solid WhatsApp green color */
+    font-size: 1.2em; /* Larger size, adjust as needed */
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    padding: 0 10px; /* Adjust the spacing between menu items */
+}
+
+nav li a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 16px; /* Adjust the padding for larger clickable area */
+}
+/* ... other styles ... */
+
+
+/* Change the link color to #111 (dark grey) on hover */
+nav li a:hover {
+    background-color: #6a99eb;
+}
+
+header, footer {
+    background-color: #004d99;
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
+
+main {
+    padding: 1em;
+}
+
+/* About Us Section */
+.info-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-us-text {
+    width: 50%;
+    background: rgba(255, 255, 255, 0.5); /* White background with 50% opacity */
+    padding: 20px;
+}
+.about-us-carousel {
+    position: relative;
+    width: 50%; /* Set the width of the carousel container to 50% of its parent */
+    height: 300px; /* Set a fixed height for your carousel container */
+    /* Other styles */
+}
+
+.carousel-image {
+    display: none; /* Hide all images by default */
+    width: 100%; /* Each image will fill the width of the .about-us-carousel */
+    height: 100%; /* Each image will fill the height of the .about-us-carousel */
+    object-fit: cover; /* This will cover the area, cropping the image if necessary */
+    /* Ensure full quality */
+}
+
+.carousel-image.active {
+    display: block; /* Show the active image */
+    /* Full quality styles remain unchanged */
+}
+
+#prevImage, #nextImage {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transform: translateY(-50%);
+    z-index: 2; /* Ensure the buttons are above the images */
+}
+
+#prevImage {
+    left: 10px; /* Adjusted to be equidistant from the left edge as the right one is from the right edge */
+}
+
+#nextImage {
+    right: 10px; /* This already sets the button equidistant from the right edge */
+}
+/* Mobile styles */
+@media screen and (max-width: 768px) {
+header {
+        width: fit-content; 
+        margin-top: 10px;
+    }
+    nav li a {
+        
+        padding-top: 15px;
+    }
+    .about-us-text{
+        width:100%;
+    }
+    .carousel-image {
+    display: none; /* Hide all images by default */
+    width: 350%; /* Each image will fill the width of the .about-us-carousel */
+    height: 100%; /* Each image will fill the height of the .about-us-carousel */
+    object-fit: cover; /* This will cover the area, cropping the image if necessary */
+    /* Ensure full quality */
+}
+}
